@@ -48,16 +48,15 @@ input[type="text"]:focus{
 
 /* -----Hides up/down buttons on numberfields that don't need them ---*/
 
-input[type=number].sheet-ref::-webkit-inner-spin-button,
-input[type=number].sheet-ref::-webkit-outer-spin-button,
-input[type=number].sheet-txtfield::-webkit-inner-spin-button,
-input[type=number].sheet-txtfield::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
-input[type=number].sheet-ref,
-input[type=number].sheet-txtfield {
-  -moz-appearance: textfield;
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
 }
 
 /* ------- Buttons ---------- */
@@ -127,11 +126,9 @@ div.sheet-stats{
 }
 
 div.sheet-stats div.sheet-stat-block{
-  background-image: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Feast_of_Legends/images/FoLstatblock.jpg?raw=true);
+  background-image: url(https://github.com/jacob7395/Traveller-Sheet/blob/master/Images/StatsBlock.png?raw=true);
   background-repeat: no-repeat;
   background-size: contain;
-  height: 65px;
-  width: auto;
 }
 
 div.sheet-stats div.sheet-stat-block label{
@@ -139,7 +136,16 @@ div.sheet-stats div.sheet-stat-block label{
   padding-left: 10px;
 }
 
-div.sheet-stats input,
+div.sheet-stats input{
+  height: 45px;
+  width: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding-left: 0px;
+  padding-bottom: 26px;
+}
+
 div.sheet-stats span{
   height: 45px;
   width: 60px;
