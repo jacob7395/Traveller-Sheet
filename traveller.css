@@ -59,40 +59,12 @@ input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
 
-/* ------- Buttons ---------- */
-
-button[type="roll"]:not(.sheet-small){
-  color: black;
-  height: 30px;
-  width: 30px;
-  margin-left: 15px;
-}
-
-button[type="roll"]:not(.sheet-small)::before{
-  font-size: 1.4em;
-}
-
-
 /*-----------------------------------------------------------------*\
   #SECTIONS
 \*-----------------------------------------------------------------*/
 
 
 /* --------- General Section Styling ------------- */
-.sheet-flex-center {
-  display: flex;
-  align-items: center;
-}
-
-.sheet-flex-middle {
-  display: flex;
-  justify-content: center;
-}
-
-.sheet-flex-down {
-  flex-flow: column nowrap;
-}
-
 .sheet-section {
     padding: 5px;
     min-height: 90%;
@@ -105,14 +77,12 @@ It uses 'Grid template areas' to name  each sheet section,
 so that they can be positioned in the grid easily,
  while also providing a human-readable overview. */
 div.sheet-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:". stats";
-  grid-gap: 6px;
   width:    650px; /* Defines the width and height of the sheet */
   height:   900px;
   padding: 5px;
+  background-color: gainsboro;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* Section-specific CSS is written in a way that removes the need to define classes
@@ -122,40 +92,59 @@ on each individual   */
 
 div.sheet-stats{
   grid-area: stats;
-  margin-left: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 5px;
+  height: auto;
+  width: auto;
+  background-color: antiquewhite;
 }
 
 div.sheet-stats div.sheet-stat-block{
   background-image: url(https://github.com/jacob7395/Traveller-Sheet/blob/master/Images/StatsBlock.png?raw=true);
   background-repeat: no-repeat;
   background-size: contain;
+  height: 80px;
+  width: 175px;
+  position: relative;
+  background-color: aqua;
+}
+
+div.sheet-stats div.sheet-stat-block div:nth-child(1){
+  z-index: 4;
+  position: relative;
+  right: 50px;
+  top: 50px;
+}
+
+div.sheet-stats div.sheet-stat-block div:nth-child(2){
+  z-index: 3;
+  position: relative;
+  right: 27px;
+  bottom: 19px;
+}
+
+div.sheet-stats div.sheet-stat-block div:nth-child(3){
+    z-index: 2;
+    position: relative;
+    left: 80px;
+    bottom: 35px;
+}
+
+div.sheet-stats div.sheet-stat-block div:nth-child(4){
+    z-index: 1;
+    position: relative;
+    left: 110px;
+    bottom: 45px;
 }
 
 div.sheet-stats div.sheet-stat-block label{
-  width: 120px;
-  padding-left: 10px;
+  font-size: 16px;
+  text-align: right;
 }
-
+div.sheet-stats span,
 div.sheet-stats input{
-  height: 45px;
-  width: 60px;
   font-size: 20px;
   font-weight: 600;
-  text-align: center;
-  padding-left: 0px;
-  padding-bottom: 26px;
-}
-
-div.sheet-stats span{
-  height: 45px;
-  width: 60px;
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  padding-left: 25px;
-}
-
-div.sheet-stats span{
-  padding-top: 15px;
-  padding-left: 10px;
+  text-align: right;
 }
