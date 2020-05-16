@@ -263,6 +263,12 @@ div.sheet-stats div.sheet-stress-block div:nth-child(4) {
     left: 2.4cm;
 }
 
+div.sheet-stats div.sheet-stress-block img{
+  position: absolute;
+  top: 0cm;
+  left: 0cm;
+}
+
 /* Shared */
 
 div.sheet-stats div.sheet-stress-block label,
