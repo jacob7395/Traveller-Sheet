@@ -4,17 +4,29 @@
 
 
 /* --------- Text ------------- */
-
-span.sheet-bold{
-  font-weight: 800;
-  font-size: medium;
-}
-
 label {
   margin: 5px 0px 5px 0px;
   font-size: 1.1em;
 }
 
+/* --------- Button ------------- */
+
+button[type=roll].sheet-text-roll{
+  background: none;
+  background-image: none;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
+
+button[type=roll].sheet-text-roll:before {
+  background: none;
+  background-image: none;
+  background-color: transparent;
+  display: none;
+  outline: 0;
+  border: 0;
+}
 
 /* --------- Inputs ------------- */
 
@@ -29,21 +41,9 @@ input[type="number"] {
   border: none;
 }
 
-textarea {
-  background-color: transparent;
-  width: 89%;
-  height: 70%;
-  margin-right: 15px;
-}
-
 input[type="checkbox"].sheet-checkbox {
   border-style: solid black;
   border-radius: 0px;
-}
-
-textarea:focus,
-input[type="text"]:focus{
-  background-color: rgb(161, 228, 255);
 }
 
 /* -----Hides up/down buttons on numberfields that don't need them ---*/
@@ -59,17 +59,24 @@ input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
 
+
+input[type=string] {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  border-bottom: 1px solid black;
+}
+
 /*-----------------------------------------------------------------*\
   #SECTIONS
 \*-----------------------------------------------------------------*/
 
 
 /* --------- General Section Styling ------------- */
-.sheet-section {
-    padding: 5px;
-    min-height: 90%;
-}
 
+p.sheet-credit {
+    color: orangered;
+}
 
 /*  ----- Character Sheet Structure -------
 '.sheet-main' defines the sheet's general structure and dimensions using CSS Grid.
@@ -77,16 +84,104 @@ It uses 'Grid template areas' to name  each sheet section,
 so that they can be positioned in the grid easily,
  while also providing a human-readable overview. */
 div.sheet-main {
-  width:    650px; /* Defines the width and height of the sheet */
-  height:   900px;
-  padding: 5px;
+  background-image: url(https://github.com/jacob7395/Traveller-Sheet/blob/master/Images/Borders.png?raw=true);
+  background-size: 20cm 30cm;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width:    20cm; /* Defines the width and height of the sheet */
+  height:   30cm;
+  padding-top:  0.5cm;
+
   background-color: gainsboro;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content min-content;
+  grid-auto-rows: min-content;
+  grid-template-areas: 
+  "info stats"
+  "finances stats"
+  "skills skills"
+  ;
 }
+
+div.sheet-main div{
+  font-weight: 600;
+  position: relative;
+}
+
+/* Position SECTIONS */
+
+div.sheet-info,
+div.sheet-finances,
+div.sheet-skills{
+  position: absolute;
+  left: 1.5cm;
+}
+
+div.sheet-stats{
+  position: absolute;
+  right: 0.5cm;
+  top: 0.7cm;
+}
+
+div.sheet-info{
+  position: absolute;
+  top: 0.2cm;
+}
+
+div.sheet-finances{
+  position: absolute;
+  top: 0.8cm;
+}
+
+div.sheet-skills{
+  position: absolute;
+  top: 0.8cm;
+}
+
 
 /* Section-specific CSS is written in a way that removes the need to define classes
 on each individual   */
+
+/* INFO SECTION */
+div.sheet-info{
+  grid-area: info;
+  height: min-content;
+  width: auto;
+  display: block;
+  margin-bottom: 0.5cm;
+}
+
+div.sheet-info input{
+  background-color: transparent;
+  border-bottom: 1px solid black;
+}
+
+div.sheet-info input[type=number]{ 
+  text-align: center;
+}
+
+/* FINANCES SECTION */
+div.sheet-finances{
+  grid-area: finances;
+  height: min-content;
+  width: auto;
+  display: block;
+  position: relative;
+}
+
+div.sheet-finances input{
+  width: 4cm;
+  position: relative;
+  height: 13px;
+  bottom: 3px;
+}
+
+div.sheet-finances p:nth-child(odd){
+  margin: 0;
+  margin-bottom: 0px;
+}
 
 /* STATS SECTION */
 
@@ -94,57 +189,195 @@ div.sheet-stats{
   grid-area: stats;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-row-gap: 5px;
-  height: auto;
+  grid-auto-rows: min-content;
+  row-gap: 0px;
+  height: min-content;
   width: auto;
-  background-color: antiquewhite;
 }
 
-div.sheet-stats div.sheet-stat-block{
-  background-image: url(https://github.com/jacob7395/Traveller-Sheet/blob/master/Images/StatsBlock.png?raw=true);
+.sheet-stat-block{
+  background-image: url(https://raw.githubusercontent.com/jacob7395/Traveller-Sheet/master/Images/StatsBlockHiRes.png?raw=true);
   background-repeat: no-repeat;
   background-size: contain;
   height: 80px;
-  width: 175px;
+  width: 150px;
   position: relative;
-  background-color: aqua;
 }
 
-div.sheet-stats div.sheet-stat-block div:nth-child(1){
-  z-index: 4;
-  position: relative;
-  right: 50px;
-  top: 50px;
+div.sheet-stats div.sheet-stat-block div{
+  grid-column: 1;
+  grid-row: 1;
 }
 
-div.sheet-stats div.sheet-stat-block div:nth-child(2){
-  z-index: 3;
-  position: relative;
-  right: 27px;
-  bottom: 19px;
-}
-
-div.sheet-stats div.sheet-stat-block div:nth-child(3){
-    z-index: 2;
-    position: relative;
-    left: 80px;
-    bottom: 35px;
-}
-
-div.sheet-stats div.sheet-stat-block div:nth-child(4){
-    z-index: 1;
-    position: relative;
-    left: 110px;
-    bottom: 45px;
-}
-
-div.sheet-stats div.sheet-stat-block label{
-  font-size: 16px;
-  text-align: right;
-}
 div.sheet-stats span,
 div.sheet-stats input{
   font-size: 20px;
   font-weight: 600;
   text-align: right;
 }
+
+
+div.sheet-stats span{
+  font-size: 35px;
+}
+
+
+/* stress block */
+
+.sheet-stress-block{
+  background-image: url(https://raw.githubusercontent.com/jacob7395/Traveller-Sheet/master/Images/StressBlock.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 80px;
+  width: 240px;
+  position: relative;
+  
+  grid-column: 1 / span 2;
+}
+
+div.sheet-stats div.sheet-stat-block div:nth-child(1),
+div.sheet-stats div.sheet-stress-block div:nth-child(1) {
+  position: absolute;
+  top: 1.45cm;
+  left: 1cm;
+}
+
+div.sheet-stats div.sheet-stat-block div:nth-child(2),
+div.sheet-stats div.sheet-stress-block div:nth-child(2) {
+  position: absolute;
+  top: 0.45cm;
+  left: 0.2cm;
+}
+
+div.sheet-stats div.sheet-stat-block div:nth-child(3),
+div.sheet-stats div.sheet-stress-block div:nth-child(3) {
+    position: absolute;
+    top: 0.85cm;
+    left:-0.1cm;
+}
+
+div.sheet-stats div.sheet-stat-block div:nth-child(4),
+div.sheet-stats div.sheet-stress-block div:nth-child(4) {
+    position: absolute;
+    top: 0.48cm;
+    left: 2.4cm;
+}
+
+/* Shared */
+
+div.sheet-stats div.sheet-stress-block label,
+div.sheet-stats div.sheet-stat-block label{
+  font-size: 16px;
+  text-align: left;
+  width: 2cm;
+}
+
+div.sheet-stats span{
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+div.sheet-stats input{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+div.sheet-stats div.sheet-stress-block input[name*=_damage],
+div.sheet-stats div.sheet-stat-block input[name*=_damage]{
+  font-size: 12px;
+  text-align: center;
+  color: crimson;
+}
+
+div.sheet-stats div.sheet-stress-block button:hover label,
+div.sheet-stats div.sheet-stat-block button:hover label{
+  color: crimson;
+}
+
+/* SKILLS SECTION */
+
+div.sheet-skills
+{
+  grid-area: skills;
+}
+
+div.sheet-skills label.sheet-Header{
+  position: relative;
+  color: orange;
+}
+
+
+div.sheet-skills-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: min-content;
+  column-gap: 5px;
+  row-gap: 0px;
+  height: min-content;
+}
+
+
+.sheet-skills-section .sheet-skills-block
+{ 
+  margin: 0px 0px 0px 0px;
+  border-bottom: 1px solid black;
+  display: inline-flex;
+  height: 0.6cm;
+  position: relative;
+}
+
+div.sheet-skills-section div.sheet-skills-block label{
+  text-align: left;
+  width: 2.7cm;
+  font-size: 12px;
+  font-weight: 50;
+}
+
+div.sheet-skills-section div.sheet-skills-block button{
+  background-color: transparent;
+  border:0px;
+  outline:0px;
+  height: fit-content;
+  width: fit-content;
+}
+
+div.sheet-skills-section div.sheet-skills-block button:hover label{
+  font-weight: bold;
+}
+
+div.sheet-skills-section div.sheet-skills-block label:nth-child(2){
+  width: 2.5cm;
+  background-color: red;
+}
+div.sheet-skills-section div.sheet-skills-block label input{ 
+  text-align: center;
+  border-bottom: 0px solid black;
+  background-color: rebeccapurple;
+  margin: 0;
+  width: 2cm;
+  position: relative;
+}
+
+div.sheet-skills-section div.sheet-skills-block select{
+  text-align: left;
+  width: 1cm;
+  background-color: transparent;
+  border:0px;
+  outline:0px;
+
+  /* Remove drop down arrow */
+  -box-sizing: border-box;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+}
+
+div.sheet-skills-section div.sheet-skills-block input{
+  text-align: right;
+  width: 0.75cm;
+  
+  position: relative;
+  top: 0.7mm;
+}
+

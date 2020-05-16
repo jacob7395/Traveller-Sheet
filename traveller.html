@@ -1,47 +1,151 @@
 <div class="main">
+  <div class="info section">
+    <div>NAME: <input name="attr_name" type="string" value=""></div>    
+    <div>
+      AGE: <input name="attr_name" type="number" value="0">
+      RADS: <input name="attr_rads" type="number" value="0">
+    </div>     
+  </div> 
+
+  
+  <div class="finances section">
+    <p>PENSION</p>  
+    <p class="credit">Cr <input name="attr_name" type="string" value=""></p>
+    <p>DEBT</p>  
+    <p class="credit">Cr <input name="attr_name" type="string" value=""></p>
+    <p>CASH ON HAND</p>  
+    <p class="credit">Cr <input name="attr_name" type="string" value=""></p>
+    <p>MONTHLY SHIP PAYMENTS:</p>  
+    <p class="credit">Cr <input name="attr_name" type="string" value=""></p>
+    <p>LIVING COST:</p>  
+    <p class="credit">Cr <input name="attr_name" type="string" value=""></p>
+  </div> 
+
   <div class="stats section">
     <div class="stat-block">
-      <div><label>STRENGTH</label></div>
+      <div>
+        <button class="text-roll" name="roll_strength" type="roll" value="&{template:default} {{name=STRENGTH}} {{Result=[[2d6+(@{strength_dm})]]}}">
+          <label>STRENGTH</label>
+        </button>
+      </div>
       <div><input name="attr_strength" type="number" value="0"></div>
-      <div><span name="attr_strength_bonus"></span></div>
-      <div><button name="roll_strength" type="roll" value="&{template:default} {{name=Strength}} {{Result=[[2d6+(@{strength_bonus})]]}}"></button></div>
+      <div><input name="attr_strength_damage" type="number" value="0"></div>
+      <div><span name="attr_strength_dm"></span></div>
     </div>
+    
     <div class="stat-block">
-      <div><label>STRENGTH</label></div>
-      <div><input name="attr_strength" type="number" value="0"></div>
-      <div><span name="attr_strength_bonus"></span></div>
-      <div><button name="roll_strength" type="roll" value="&{template:default} {{name=Strength}} {{Result=[[2d6+(@{strength_bonus})]]}}"></button></div>
+      <div>
+        <button class="text-roll" name="roll_dexterity" type="roll" value="&{template:default} {{name=Dexterity}} {{Result=[[2d6+(@{dexterity_dm})]]}}">
+          <label>DEXTERITY</label>
+        </button>
+      </div>
+      <div><input name="attr_dexterity" type="number" value="0"></div>
+      <div><input name="attr_dexterity_damage" type="number" value="0"></div>
+      <div><span name="attr_dexterity_dm"></span></div>
     </div>
-    <div class="stat-block">
-      <div><label>STRENGTH</label></div>
-      <div><input name="attr_strength" type="number" value="0"></div>
-      <div><span name="attr_strength_bonus"></span></div>
-      <div><button name="roll_strength" type="roll" value="&{template:default} {{name=Strength}} {{Result=[[2d6+(@{strength_bonus})]]}}"></button></div>
-    </div>
-    </div>
-  </div>   
-</div>
 
+    <div class="stat-block">
+      <div>
+        <button class="text-roll" name="roll_endurance" type="roll" value="&{template:default} {{name=ENDURANCE}} {{Result=[[2d6+(@{endurance_dm})]]}}">
+          <label>ENDURANCE</label>
+        </button>
+      </div>
+      <div><input name="attr_endurance" type="number" value="0"></div>
+      <div><input name="attr_endurance_damage" type="number" value="0"></div>
+      <div><span name="attr_endurance_dm"></span></div>
+    </div>
+
+    <div class="stat-block">
+      <div>
+        <button class="text-roll" name="roll_intellect" type="roll" value="&{template:default} {{name=INTELLECT}} {{Result=[[2d6+(@{intellect_dm})]]}}">
+          <label>INTELLECT</label>
+        </button>
+      </div>
+      <div><input name="attr_intellect" type="number" value="0"></div>
+      <div><input name="attr_intellect_damage" type="number" value="0"></div>
+      <div><span name="attr_intellect_dm"></span></div>
+    </div>
+
+    <div class="stat-block">
+      <div>
+        <button class="text-roll" name="roll_education" type="roll" value="&{template:default} {{name=EDUCATION}} {{Result=[[2d6+(@{education_dm})]]}}">
+          <label>EDUCATION</label>
+        </button>
+      </div>
+      <div><input name="attr_education" type="number" value="0"></div>
+      <div><input name="attr_education_damage" type="number" value="0"></div>
+      <div><span name="attr_education_dm"></span></div>
+    </div>
+
+    <div class="stat-block">
+      <div>
+        <button class="text-roll" name="roll_social" type="roll" value="&{template:default} {{name=SOCIAL}} {{Result=[[2d6+(@{social_dm})]]}}">
+          <label>SOCIAL</label>
+        </button>
+      </div>
+      <div><input name="attr_social" type="number" value="0"></div>
+      <div><input name="attr_social_damage" type="number" value="0"></div>
+      <div><span name="attr_social_dm"></span></div>
+    </div>
+
+    <div class="stress-block">
+      <div>
+        <button class="text-roll" name="roll_social" type="roll">
+          <label>STRESS</label>
+        </button>
+      </div>
+      <div><input name="attr_stress" type="number" value="0"></div>
+      <div><input name="attr_stress_damage" type="number" value="0"></div>
+    </div>
+  </div>
+  
+    
+<div class="skills">
+  <label class="Header">SKILLS</label>
+
+  <div class="skills-section section">
+      <div class="skills-block">   
+        <button class="text-roll" type="roll" value="&{template:default} {{name=Admin}} {{Result=[[2d6+(@{skill_admin})+(@{skill_admin_stat})]]}}" name="roll_admin_skill">
+          <label>Jack of All Trades</label>
+        </button>
+        <select name="attr_skill_admin_stat">
+          <option value="@{strength_dm}" selected="selected">STR</option>
+          <option value="@{dexterity_dm}">DEX</option>
+          <option value="@{endurance_dm}">END</option>
+          <option value="@{intellect_dm}">INT</option>
+          <option value="@{education_dm}">EDU</option>
+          <option value="@{social_dm}">SOC</option>
+        </select>
+        <input name="attr_skill_admin" type="number" value="0">
+      </div>
+
+
+  </div>
+</div>
+  
+</div>
 <!-- ---------------------------SHEET WORKERS----------------- -->
 
 <script type="text/worker">
-  const stats = ["strength"];
+  const stats = ["strength", "dexterity", "endurance", "intellect", "education", "social"];
   stats.forEach(stat => {
-      on(`change:${stat}`, () => {
-          getAttrs([stat], values => {
-              const stat_base = values[stat];
-              console.log(stat_base);
-              let stat_bonus = -5;
-              if (stat_base >= 15) stat_bonus = "+3";
-              else if (stat_base >= 12) stat_bonus = "+2";
-              else if (stat_base >= 9) stat_bonus = "+1";
-              else if (stat_base >= 6) stat_bonus = "0";
-              else if (stat_base >= 3) stat_bonus = "-1";
-              else if (stat_base >= 1) stat_bonus = "-2";
-              else stat_bonus = "-3";
+      on(`change:${stat} change:${stat}_damage`, () => {
+          getAttrs([stat, `${stat}_damage`], values => {
+              let stat_base = values[stat];              
+              let stat_damage = values[`${stat}_damage`];
+              let stat_current = stat_base - stat_damage;
+              console.log(stat_current);
+              let stat_dm = -5;
+              if (stat_current >= 15) stat_dm = "+3";
+              else if (stat_current >= 12) stat_dm = "+2";
+              else if (stat_current >= 9) stat_dm = "+1";
+              else if (stat_current >= 6) stat_dm = "0";
+              else if (stat_current >= 3) stat_dm = "-1";
+              else if (stat_current >= 1) stat_dm = "-2";
+              else stat_dm = "-3";
               
               setAttrs({
-                  [`${stat}_bonus`]: stat_bonus
+                  [`${stat}_dm`]: stat_dm
               });
           });
       });
