@@ -101,7 +101,7 @@ div.sheet-main {
   grid-template-areas: 
   "info stats"
   "finances stats"
-  "skills skills"
+  "tab tab"
   ;
 }
 
@@ -114,7 +114,7 @@ div.sheet-main div{
 
 div.sheet-info,
 div.sheet-finances,
-div.sheet-skills{
+div.sheet-tab-section{
   position: absolute;
   left: 1.5cm;
 }
@@ -132,12 +132,12 @@ div.sheet-info{
 
 div.sheet-finances{
   position: absolute;
-  top: 0.8cm;
+  top: 0.4cm;
 }
 
-div.sheet-skills{
+div.sheet-tab-section{
   position: absolute;
-  top: 0.8cm;
+  top: 0.35cm;
 }
 
 
@@ -256,17 +256,10 @@ div.sheet-stats div.sheet-stress-block div:nth-child(3) {
     left:-0.1cm;
 }
 
-div.sheet-stats div.sheet-stat-block div:nth-child(4),
-div.sheet-stats div.sheet-stress-block div:nth-child(4) {
+div.sheet-stats div.sheet-stat-block div:nth-child(4){
     position: absolute;
     top: 0.48cm;
     left: 2.4cm;
-}
-
-div.sheet-stats div.sheet-stress-block img{
-  position: absolute;
-  top: 0cm;
-  left: 0cm;
 }
 
 /* Shared */
@@ -302,24 +295,33 @@ div.sheet-stats div.sheet-stat-block button:hover label{
   color: crimson;
 }
 
-/* SKILLS SECTION */
+/* TAB SECTION */
 
-div.sheet-skills
+div.sheet-tab-section
 {
-  grid-area: skills;
+  grid-area: tab;
 }
 
-div.sheet-skills label.sheet-Header{
-  position: relative;
-  color: orange;
+div.sheet-tab-section button[type=action]
+{
+  background: none;
+  background-image: none;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+
+  font-size: 15px;
+  font-weight: 400;
+  color: orangered;
 }
 
+/* SKILLS SECTION */
 
 div.sheet-skills-section{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: min-content min-content min-content;
   grid-auto-rows: min-content;
-  column-gap: 5px;
+  column-gap: 1cm;
   row-gap: 0px;
   height: min-content;
 }
@@ -332,11 +334,12 @@ div.sheet-skills-section{
   display: inline-flex;
   height: 0.6cm;
   position: relative;
+  width: min-content;
 }
 
 div.sheet-skills-section div.sheet-skills-block label{
   text-align: left;
-  width: 2.7cm;
+  width: 2.8cm;
   font-size: 12px;
   font-weight: 50;
 }
@@ -351,19 +354,6 @@ div.sheet-skills-section div.sheet-skills-block button{
 
 div.sheet-skills-section div.sheet-skills-block button:hover label{
   font-weight: bold;
-}
-
-div.sheet-skills-section div.sheet-skills-block label:nth-child(2){
-  width: 2.5cm;
-  background-color: red;
-}
-div.sheet-skills-section div.sheet-skills-block label input{ 
-  text-align: center;
-  border-bottom: 0px solid black;
-  background-color: rebeccapurple;
-  margin: 0;
-  width: 2cm;
-  position: relative;
 }
 
 div.sheet-skills-section div.sheet-skills-block select{

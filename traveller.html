@@ -1,5 +1,5 @@
 <div class="main">
-  <div class="info section">
+  <div class="info">
     <div>NAME: <input name="attr_name" type="string" value=""></div>    
     <div>
       AGE: <input name="attr_name" type="number" value="0">
@@ -8,7 +8,7 @@
   </div> 
 
   
-  <div class="finances section">
+  <div class="finances">
     <p>PENSION</p>  
     <p class="credit">Cr <input name="attr_name" type="string" value=""></p>
     <p>DEBT</p>  
@@ -21,7 +21,7 @@
     <p class="credit">Cr <input name="attr_name" type="string" value=""></p>
   </div> 
 
-  <div class="stats section">
+  <div class="stats">
     <div class="stat-block">
       <div>
         <button class="text-roll" name="roll_strength" type="roll" value="&{template:default} {{name=STRENGTH}} {{Result=[[2d6+(@{strength_dm})]]}}">
@@ -100,27 +100,28 @@
   </div>
   
     
-<div class="skills">
-  <label class="Header">SKILLS</label>
+<div class="tab-section">
+    <div>
+        <button type="action" name="act_skill" >SKILLS</button>
+        <button type="action" name="act_equipment" >EQUIPMENT</button>
+    </div>
 
-  <div class="skills-section section">
-      <div class="skills-block">   
-        <button class="text-roll" type="roll" value="&{template:default} {{name=Admin}} {{Result=[[2d6+(@{skill_admin})+(@{skill_admin_stat})]]}}" name="roll_admin_skill">
-          <label>Jack of All Trades</label>
-        </button>
-        <select name="attr_skill_admin_stat">
-          <option value="@{strength_dm}" selected="selected">STR</option>
-          <option value="@{dexterity_dm}">DEX</option>
-          <option value="@{endurance_dm}">END</option>
-          <option value="@{intellect_dm}">INT</option>
-          <option value="@{education_dm}">EDU</option>
-          <option value="@{social_dm}">SOC</option>
-        </select>
-        <input name="attr_skill_admin" type="number" value="0">
-      </div>
-
-
-  </div>
+  <div class='skills'>
+    <div class='skills-block'>   
+      <button class='text-roll' type='roll' value='&{template:default} {{name=Admin}} {{Result=[[2d6+(@{skill_admin})+(@{skill_admin_stat})]]}}' name='roll_admin_skill'>
+          <label>Admin</label>
+      </button>
+      <select name='attr_skill_admin_stat'>
+          <option value='@{strength_dm}' selected='selected'>STR</option>
+          <option value='@{dexterity_dm}'>DEX</option>
+          <option value='@{endurance_dm}'>END</option>
+          <option value='@{intellect_dm}'>INT</option>
+          <option value='@{education_dm}'>EDU</option>
+          <option value='@{social_dm}'>SOC</option>
+      </select>
+      <input name='attr_skill_admin' type='number' value='-3'>
+    </div>
+  </div> 
 </div>
   
 </div>

@@ -1,0 +1,658 @@
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Admin}} {{Result=[[2d6+(@{skill_admin})+(@{skill_admin_stat})]]}}' name='roll_admin_skill'>
+        <label>Admin</label>
+    </button>
+    <select name='attr_skill_admin_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_admin' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=M-Drive}} {{Result=[[2d6+(@{skill_m-drive})+(@{skill_m-drive_stat})]]}}' name='roll_m-drive_skill'>
+        <label>M-Drive</label>
+    </button>
+    <select name='attr_skill_m-drive_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_m-drive' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Mechanic}} {{Result=[[2d6+(@{skill_mechanic})+(@{skill_mechanic_stat})]]}}' name='roll_mechanic_skill'>
+        <label>Mechanic</label>
+    </button>
+    <select name='attr_skill_mechanic_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_mechanic' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Advocate}} {{Result=[[2d6+(@{skill_advocate})+(@{skill_advocate_stat})]]}}' name='roll_advocate_skill'>
+        <label>Advocate</label>
+    </button>
+    <select name='attr_skill_advocate_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_advocate' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=E-Drive}} {{Result=[[2d6+(@{skill_e-drive})+(@{skill_e-drive_stat})]]}}' name='roll_e-drive_skill'>
+        <label>E-Drive</label>
+    </button>
+    <select name='attr_skill_e-drive_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_e-drive' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Medic}} {{Result=[[2d6+(@{skill_medic})+(@{skill_medic_stat})]]}}' name='roll_medic_skill'>
+        <label>Medic</label>
+    </button>
+    <select name='attr_skill_medic_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_medic' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Animals}} {{Result=[[2d6+(@{skill_animals})+(@{skill_animals_stat})]]}}' name='roll_animals_skill'>
+        <label>Animals</label>
+    </button>
+    <select name='attr_skill_animals_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_animals' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Life Support}} {{Result=[[2d6+(@{skill_life support})+(@{skill_life support_stat})]]}}' name='roll_life support_skill'>
+        <label>Life Support</label>
+    </button>
+    <select name='attr_skill_life support_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_life support' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Melee}} {{Result=[[2d6+(@{skill_melee})+(@{skill_melee_stat})]]}}' name='roll_melee_skill'>
+        <label>Melee</label>
+    </button>
+    <select name='attr_skill_melee_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_melee' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Art}} {{Result=[[2d6+(@{skill_art})+(@{skill_art_stat})]]}}' name='roll_art_skill'>
+        <label>Art</label>
+    </button>
+    <select name='attr_skill_art_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_art' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Power}} {{Result=[[2d6+(@{skill_power})+(@{skill_power_stat})]]}}' name='roll_power_skill'>
+        <label>Power</label>
+    </button>
+    <select name='attr_skill_power_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_power' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Navigation}} {{Result=[[2d6+(@{skill_navigation})+(@{skill_navigation_stat})]]}}' name='roll_navigation_skill'>
+        <label>Navigation</label>
+    </button>
+    <select name='attr_skill_navigation_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_navigation' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Astrogation}} {{Result=[[2d6+(@{skill_astrogation})+(@{skill_astrogation_stat})]]}}' name='roll_astrogation_skill'>
+        <label>Astrogation</label>
+    </button>
+    <select name='attr_skill_astrogation_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_astrogation' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Explosives}} {{Result=[[2d6+(@{skill_explosives})+(@{skill_explosives_stat})]]}}' name='roll_explosives_skill'>
+        <label>Explosives</label>
+    </button>
+    <select name='attr_skill_explosives_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_explosives' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Persuade}} {{Result=[[2d6+(@{skill_persuade})+(@{skill_persuade_stat})]]}}' name='roll_persuade_skill'>
+        <label>Persuade</label>
+    </button>
+    <select name='attr_skill_persuade_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_persuade' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Broker}} {{Result=[[2d6+(@{skill_broker})+(@{skill_broker_stat})]]}}' name='roll_broker_skill'>
+        <label>Broker</label>
+    </button>
+    <select name='attr_skill_broker_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_broker' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Flyer}} {{Result=[[2d6+(@{skill_flyer})+(@{skill_flyer_stat})]]}}' name='roll_flyer_skill'>
+        <label>Flyer</label>
+    </button>
+    <select name='attr_skill_flyer_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_flyer' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Profession}} {{Result=[[2d6+(@{skill_profession})+(@{skill_profession_stat})]]}}' name='roll_profession_skill'>
+        <label>Profession</label>
+    </button>
+    <select name='attr_skill_profession_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_profession' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Carouse}} {{Result=[[2d6+(@{skill_carouse})+(@{skill_carouse_stat})]]}}' name='roll_carouse_skill'>
+        <label>Carouse</label>
+    </button>
+    <select name='attr_skill_carouse_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_carouse' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Gambler}} {{Result=[[2d6+(@{skill_gambler})+(@{skill_gambler_stat})]]}}' name='roll_gambler_skill'>
+        <label>Gambler</label>
+    </button>
+    <select name='attr_skill_gambler_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_gambler' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Science}} {{Result=[[2d6+(@{skill_science})+(@{skill_science_stat})]]}}' name='roll_science_skill'>
+        <label>Science</label>
+    </button>
+    <select name='attr_skill_science_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_science' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Deception}} {{Result=[[2d6+(@{skill_deception})+(@{skill_deception_stat})]]}}' name='roll_deception_skill'>
+        <label>Deception</label>
+    </button>
+    <select name='attr_skill_deception_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_deception' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Gunner}} {{Result=[[2d6+(@{skill_gunner})+(@{skill_gunner_stat})]]}}' name='roll_gunner_skill'>
+        <label>Gunner</label>
+    </button>
+    <select name='attr_skill_gunner_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_gunner' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=SeaFarer}} {{Result=[[2d6+(@{skill_seafarer})+(@{skill_seafarer_stat})]]}}' name='roll_seafarer_skill'>
+        <label>SeaFarer</label>
+    </button>
+    <select name='attr_skill_seafarer_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_seafarer' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Diplomat}} {{Result=[[2d6+(@{skill_diplomat})+(@{skill_diplomat_stat})]]}}' name='roll_diplomat_skill'>
+        <label>Diplomat</label>
+    </button>
+    <select name='attr_skill_diplomat_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_diplomat' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Gun Combat}} {{Result=[[2d6+(@{skill_gun combat})+(@{skill_gun combat_stat})]]}}' name='roll_gun combat_skill'>
+        <label>Gun Combat</label>
+    </button>
+    <select name='attr_skill_gun combat_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_gun combat' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Steward}} {{Result=[[2d6+(@{skill_steward})+(@{skill_steward_stat})]]}}' name='roll_steward_skill'>
+        <label>Steward</label>
+    </button>
+    <select name='attr_skill_steward_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_steward' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Drive}} {{Result=[[2d6+(@{skill_drive})+(@{skill_drive_stat})]]}}' name='roll_drive_skill'>
+        <label>Drive</label>
+    </button>
+    <select name='attr_skill_drive_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_drive' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Energy}} {{Result=[[2d6+(@{skill_energy})+(@{skill_energy_stat})]]}}' name='roll_energy_skill'>
+        <label>Energy</label>
+    </button>
+    <select name='attr_skill_energy_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_energy' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Streetwise}} {{Result=[[2d6+(@{skill_streetwise})+(@{skill_streetwise_stat})]]}}' name='roll_streetwise_skill'>
+        <label>Streetwise</label>
+    </button>
+    <select name='attr_skill_streetwise_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_streetwise' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Electronics}} {{Result=[[2d6+(@{skill_electronics})+(@{skill_electronics_stat})]]}}' name='roll_electronics_skill'>
+        <label>Electronics</label>
+    </button>
+    <select name='attr_skill_electronics_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_electronics' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Slug}} {{Result=[[2d6+(@{skill_slug})+(@{skill_slug_stat})]]}}' name='roll_slug_skill'>
+        <label>Slug</label>
+    </button>
+    <select name='attr_skill_slug_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_slug' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Survival}} {{Result=[[2d6+(@{skill_survival})+(@{skill_survival_stat})]]}}' name='roll_survival_skill'>
+        <label>Survival</label>
+    </button>
+    <select name='attr_skill_survival_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_survival' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Sensors}} {{Result=[[2d6+(@{skill_sensors})+(@{skill_sensors_stat})]]}}' name='roll_sensors_skill'>
+        <label>Sensors</label>
+    </button>
+    <select name='attr_skill_sensors_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_sensors' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Heavy Weapon}} {{Result=[[2d6+(@{skill_heavy weapon})+(@{skill_heavy weapon_stat})]]}}' name='roll_heavy weapon_skill'>
+        <label>Heavy Weapon</label>
+    </button>
+    <select name='attr_skill_heavy weapon_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_heavy weapon' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Tactics}} {{Result=[[2d6+(@{skill_tactics})+(@{skill_tactics_stat})]]}}' name='roll_tactics_skill'>
+        <label>Tactics</label>
+    </button>
+    <select name='attr_skill_tactics_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_tactics' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Computers}} {{Result=[[2d6+(@{skill_computers})+(@{skill_computers_stat})]]}}' name='roll_computers_skill'>
+        <label>Computers</label>
+    </button>
+    <select name='attr_skill_computers_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_computers' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Investigate}} {{Result=[[2d6+(@{skill_investigate})+(@{skill_investigate_stat})]]}}' name='roll_investigate_skill'>
+        <label>Investigate</label>
+    </button>
+    <select name='attr_skill_investigate_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_investigate' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Vacc Suit}} {{Result=[[2d6+(@{skill_vacc suit})+(@{skill_vacc suit_stat})]]}}' name='roll_vacc suit_skill'>
+        <label>Vacc Suit</label>
+    </button>
+    <select name='attr_skill_vacc suit_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_vacc suit' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Remote Ops}} {{Result=[[2d6+(@{skill_remote ops})+(@{skill_remote ops_stat})]]}}' name='roll_remote ops_skill'>
+        <label>Remote Ops</label>
+    </button>
+    <select name='attr_skill_remote ops_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_remote ops' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Jacob-of-All-Trades}} {{Result=[[2d6+(@{skill_jacob-of-all-trades})+(@{skill_jacob-of-all-trades_stat})]]}}' name='roll_jacob-of-all-trades_skill'>
+        <label>Jacob-of-All-Trades</label>
+    </button>
+    <select name='attr_skill_jacob-of-all-trades_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_jacob-of-all-trades' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Custom 1}} {{Result=[[2d6+(@{skill_custom 1})+(@{skill_custom 1_stat})]]}}' name='roll_custom 1_skill'>
+        <label>Custom 1</label>
+    </button>
+    <select name='attr_skill_custom 1_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_custom 1' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Sensors}} {{Result=[[2d6+(@{skill_sensors})+(@{skill_sensors_stat})]]}}' name='roll_sensors_skill'>
+        <label>Sensors</label>
+    </button>
+    <select name='attr_skill_sensors_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_sensors' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Language}} {{Result=[[2d6+(@{skill_language})+(@{skill_language_stat})]]}}' name='roll_language_skill'>
+        <label>Language</label>
+    </button>
+    <select name='attr_skill_language_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_language' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Custom 2}} {{Result=[[2d6+(@{skill_custom 2})+(@{skill_custom 2_stat})]]}}' name='roll_custom 2_skill'>
+        <label>Custom 2</label>
+    </button>
+    <select name='attr_skill_custom 2_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_custom 2' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Engineer}} {{Result=[[2d6+(@{skill_engineer})+(@{skill_engineer_stat})]]}}' name='roll_engineer_skill'>
+        <label>Engineer</label>
+    </button>
+    <select name='attr_skill_engineer_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_engineer' type='number' value='0'>
+</div>
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name=Leadership}} {{Result=[[2d6+(@{skill_leadership})+(@{skill_leadership_stat})]]}}' name='roll_leadership_skill'>
+        <label>Leadership</label>
+    </button>
+    <select name='attr_skill_leadership_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_leadership' type='number' value='0'>
+</div>

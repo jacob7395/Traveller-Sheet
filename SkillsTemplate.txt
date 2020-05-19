@@ -1,0 +1,14 @@
+<div class='skills-block'>   
+    <button class='text-roll' type='roll' value='&{template:default} {{name={Name}}} {{Result=[[2d6+(@{skill_{name lower}})+(@{skill_{name lower}_stat})]]}}' name='roll_{name lower}_skill'>
+        <label>{Name}</label>
+    </button>
+    <select name='attr_skill_{name lower}_stat'>
+        <option value='@{strength_dm}' selected='selected'>STR</option>
+        <option value='@{dexterity_dm}'>DEX</option>
+        <option value='@{endurance_dm}'>END</option>
+        <option value='@{intellect_dm}'>INT</option>
+        <option value='@{education_dm}'>EDU</option>
+        <option value='@{social_dm}'>SOC</option>
+    </select>
+    <input name='attr_skill_{name lower}' type='number' value='-3'>
+</div>
